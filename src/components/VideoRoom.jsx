@@ -18,7 +18,7 @@ export const VideoRoom = ({ onLeave }) => {
   const handleUserJoined = async (user, mediaType) => {
     await client.subscribe(user, mediaType);
     if (mediaType === 'video') setUsers((prev) => [...prev, user]);
-    if (mediaType === 'audio') user.audioTrack?.play();
+    //if (mediaType === 'audio') user.audioTrack?.play();
   };
 
   const handleUserLeft = (user) => {
